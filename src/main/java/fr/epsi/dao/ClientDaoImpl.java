@@ -1,7 +1,6 @@
 package fr.epsi.dao;
 
 import fr.epsi.entite.Client;
-import fr.epsi.entite.Produit;
 
 import javax.persistence.EntityManager;
 import javax.transaction.*;

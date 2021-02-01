@@ -1,20 +1,20 @@
 package fr.epsi.dao;
 
-import fr.epsi.entite.Produit;
+import fr.epsi.entite.Article;
 
 import javax.persistence.EntityManager;
 import javax.transaction.*;
 
-public class ProduitDaoImpl implements ProduitDao{
+public class ArticleDaoImpl implements ArticleDao {
 
 	EntityManager em;
 	UserTransaction utx;
 
-	public ProduitDaoImpl(EntityManager em, UserTransaction utx) {
+	public ArticleDaoImpl(EntityManager em, UserTransaction utx) {
 		this.em=em;
 		this.utx=utx;
 	}
-	public void create(Produit p) {
+	public void create(Article p) {
 		try {
 			utx.begin();
 			em.persist(p);

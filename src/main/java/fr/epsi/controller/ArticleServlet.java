@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.epsi.dto.ProduitDTO;
-import fr.epsi.service.ProduitService;
+import fr.epsi.dto.ArticleDTO;
+import fr.epsi.service.ArticleService;
 
 //Couche WEB
-public class ProduitServlet extends HttpServlet{
+public class ArticleServlet extends HttpServlet{
 	
 	@EJB
-	private ProduitService service;
+	private ArticleService service;
 	//m?me chose 
 	//private VoitureService service = new VoitureServiceImpl();
 	
@@ -23,14 +23,14 @@ public class ProduitServlet extends HttpServlet{
 	        throws ServletException, IOException
 	        
 	    {
-		  this.getServletContext().getRequestDispatcher("/WEB-INF/createProduit.jsp").forward(req, resp);
+		  this.getServletContext().getRequestDispatcher("/WEB-INF/createArticle.jsp").forward(req, resp);
 	    }
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 	        throws ServletException, IOException
 	        
 	    {
-			ProduitDTO vDTO=new ProduitDTO();
+			ArticleDTO vDTO=new ArticleDTO();
 			vDTO.setNumero( req.getParameter("numero"));
 			vDTO.setNomProduit(req.getParameter("nomProduit"));
 			vDTO.setPrix(req.getParameter("prix"));

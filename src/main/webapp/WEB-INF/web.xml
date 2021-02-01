@@ -3,13 +3,13 @@
 	<display-name>TP_RENDU</display-name>
 	
 	<servlet>
-	  <servlet-name>ProduitServlet</servlet-name>
-	  <servlet-class>fr.epsi.controller.ProduitServlet</servlet-class>
+	  <servlet-name>ArticleServlet</servlet-name>
+	  <servlet-class>fr.epsi.controller.ArticleServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-	   <servlet-name>ProduitServlet</servlet-name>
-	   <url-pattern>/produit/create</url-pattern>
+	   <servlet-name>ArticleServlet</servlet-name>
+	   <url-pattern>/article/create</url-pattern>
 	</servlet-mapping>
 	
 	

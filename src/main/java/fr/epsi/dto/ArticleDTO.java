@@ -1,6 +1,6 @@
 package fr.epsi.dto;
 
-public class ProduitDTO {
+public class ArticleDTO {
 
 
 	private String numero;

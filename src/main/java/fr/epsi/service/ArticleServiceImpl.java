@@ -1,9 +1,9 @@
 package fr.epsi.service;
 
-import fr.epsi.dao.ProduitDao;
-import fr.epsi.dao.ProduitDaoImpl;
-import fr.epsi.dto.ProduitDTO;
-import fr.epsi.entite.Produit;
+import fr.epsi.dao.ArticleDao;
+import fr.epsi.dao.ArticleDaoImpl;
+import fr.epsi.dto.ArticleDTO;
+import fr.epsi.entite.Article;
 
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
@@ -16,7 +16,7 @@ import javax.transaction.UserTransaction;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.BEAN)
-public class ProduitServiceImpl implements ProduitService {
+public class ArticleServiceImpl implements ArticleService {
 
 	@PersistenceContext
 	EntityManager em;
@@ -24,13 +24,13 @@ public class ProduitServiceImpl implements ProduitService {
 	@Resource
 	UserTransaction utx;
 	
-	public void create(ProduitDTO p)  {
+	public void create(ArticleDTO p)  {
 		
-		Produit produit = new Produit();
+		Article produit = new Article();
 		produit.setNumero(p.getNumero());
 		produit.setNomProduit(p.getNomProduit());
 		produit.setPrix(p.getPrix());
-		ProduitDao dao =new ProduitDaoImpl(em, utx);
+		ArticleDao dao =new ArticleDaoImpl(em, utx);
 		
 		dao.create(produit);
 		
