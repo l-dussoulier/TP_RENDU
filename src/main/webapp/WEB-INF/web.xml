@@ -21,6 +21,15 @@
 	   <servlet-name>HomeServlet</servlet-name>
 	   <url-pattern>/home</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ClientServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.ClientServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientServlet</servlet-name>
+		<url-pattern>/client/create</url-pattern>
+	</servlet-mapping>
 	
 	
 </web-app>

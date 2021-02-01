@@ -1,28 +1,24 @@
 package fr.epsi.dao;
 
+import fr.epsi.entite.Client;
+import fr.epsi.entite.Produit;
+
 import javax.persistence.EntityManager;
-import javax.transaction.HeuristicMixedException;
-import javax.transaction.HeuristicRollbackException;
-import javax.transaction.NotSupportedException;
-import javax.transaction.RollbackException;
-import javax.transaction.SystemException;
-import javax.transaction.UserTransaction;
+import javax.transaction.*;
 
-import fr.epsi.entite.Voiture;
+public class ClientDaoImpl implements ClientDao{
 
-public class VoitureDaoImpl implements VoitureDao{
-	
 	EntityManager em;
 	UserTransaction utx;
 
-	public VoitureDaoImpl(EntityManager em, UserTransaction utx) {
+	public ClientDaoImpl(EntityManager em, UserTransaction utx) {
 		this.em=em;
 		this.utx=utx;
 	}
-	public void create(Voiture v) {
+	public void create(Client c) {
 		try {
 			utx.begin();
-			em.persist(v);
+			em.persist(c);
 			
 			utx.commit();
 		} catch (NotSupportedException e) {
