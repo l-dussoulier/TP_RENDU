@@ -3,7 +3,11 @@ package fr.epsi.controller;
 import fr.epsi.dto.ArticleDTO;
 import fr.epsi.dto.FactureDTO;
 import fr.epsi.dto.LigneFactureDTO;
+import fr.epsi.entite.Article;
+import fr.epsi.entite.Facture;
+import fr.epsi.entite.LigneFacture;
 import fr.epsi.service.ArticleService;
+import fr.epsi.service.FactureService;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -14,39 +18,17 @@ import java.io.IOException;
 
 //Couche WEB
 public class FactureServlet extends HttpServlet{
-	
+
 	@EJB
-	private ArticleService service;
-	//m?me chose 
-	//private VoitureService service = new VoitureServiceImpl();
-	
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-	        throws ServletException, IOException
-	        
-	    {
-		  this.getServletContext().getRequestDispatcher("/WEB-INF/listeFactures.jsp").forward(req, resp);
-	    }
-	
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-	        throws ServletException, IOException
-	        
-	    {
-	    	ArticleDTO articleDTO = new ArticleDTO();
-	    	articleDTO.setNumero("AAA");
-	    	articleDTO.setPrix(15.5);
-	    	articleDTO.setNomProduit("banane");
+	private FactureService factureService;
 
-			LigneFactureDTO ligneFactureDTO = new LigneFactureDTO();
-			ligneFactureDTO.setArticleDTO(articleDTO);
-			ligneFactureDTO.setQte(4);
-			ligneFactureDTO.setPrix(100.00);
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		request.setAttribute("factures", factureService.getFactures());
+		this.getServletContext().getRequestDispatcher("/WEB-INF/Factures.jsp").forward(request, response);
 
-
-			FactureDTO factureDTO = new FactureDTO();
-			factureDTO.AddListeLigneFact(ligneFactureDTO);
-
-			System.out.println(factureDTO.getListeLigneFact());
-			
-	    }
+		for (Facture facture : factureService.getFactures()) {
+			System.out.println(facture.getId());
+		}
+	}
 
 }

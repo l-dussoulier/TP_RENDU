@@ -48,6 +48,15 @@
 		<servlet-name>ListeArticleServlet</servlet-name>
 		<url-pattern>/article/ListeArticles</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FactureServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.FactureServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FactureServlet</servlet-name>
+		<url-pattern>/Factures</url-pattern>
+	</servlet-mapping>
 	
 	
 </web-app>

@@ -28,6 +28,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="client/ListeClient">Liste Client</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Factures">Liste Factures</a>
+            </li>
         </ul>
     </div>
 </nav>

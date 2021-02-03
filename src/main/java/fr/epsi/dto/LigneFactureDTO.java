@@ -1,5 +1,7 @@
 package fr.epsi.dto;
 
+import fr.epsi.entite.Article;
+
 import java.util.Date;
 import java.util.List;
 
@@ -8,7 +10,7 @@ public class LigneFactureDTO {
 
 	private Integer qte;
 	private Double prix;
-	private ArticleDTO articleDTO;
+	private Article article;
 
 
 	public Integer getQte() {
@@ -27,11 +29,11 @@ public class LigneFactureDTO {
 		this.prix = prix;
 	}
 
-	public ArticleDTO getArticleDTO() {
-		return articleDTO;
+	public Article getArticle() {
+		return article;
 	}
 
-	public void setArticleDTO(ArticleDTO articleDTO) {
-		this.articleDTO = articleDTO;
+	public void setArticle(Article article) {
+		this.article= article;
 	}
 }

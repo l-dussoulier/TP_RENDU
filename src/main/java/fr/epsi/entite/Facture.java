@@ -1,16 +1,22 @@
-package fr.epsi.dto;
+package fr.epsi.entite;
 
-import fr.epsi.entite.LigneFacture;
+import fr.epsi.dto.LigneFactureDTO;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-public class FactureDTO {
+@Entity
+public class Facture extends Object{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	private Double id;
-	private Date Date;
+	private java.util.Date Date;
 	private String numero;
 	private Double prix;
+	@OneToMany
 	private List<LigneFacture> listeLigneFact;
 
 
@@ -50,11 +56,7 @@ public class FactureDTO {
 		this.listeLigneFact.add(ligneFacture);
 	}
 
-	public Double getId() {
+	public Long getId() {
 		return id;
-	}
-
-	public void setId(Double id) {
-		this.id = id;
 	}
 }
