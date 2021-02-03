@@ -5,7 +5,7 @@ public class ArticleDTO {
 
 	private String numero;
 	private String nomProduit;
-	private String prix;
+	private Double prix;
 
 
 	public String getNumero() {
@@ -24,11 +24,11 @@ public class ArticleDTO {
 		this.nomProduit = nomProduit;
 	}
 
-	public String getPrix() {
+	public Double getPrix() {
 		return prix;
 	}
 
-	public void setPrix(String prix) {
+	public void setPrix(Double prix) {
 		this.prix = prix;
 	}
 }

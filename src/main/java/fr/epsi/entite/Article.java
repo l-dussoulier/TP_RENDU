@@ -14,7 +14,7 @@ public class Article {
 	
 	private String numero;
 	private String nomProduit;
-	private String prix;
+	private Double prix;
 	
 	public Long getId() {
 		return id;
@@ -40,11 +40,11 @@ public class Article {
 		this.numero = numero;
 	}
 
-	public String getPrix() {
+	public Double getPrix() {
 		return prix;
 	}
 
-	public void setPrix(String prix) {
+	public void setPrix(Double prix) {
 		this.prix = prix;
 	}
 }

@@ -31,6 +31,8 @@ public class ClientServlet extends HttpServlet{
 			cDTO.setNom( req.getParameter("nom"));
 			cDTO.setAdresse(req.getParameter("adresse"));
 			service.create(cDTO);
+
+			re
 			
 	    }
 

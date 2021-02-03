@@ -33,7 +33,7 @@ public class ArticleServlet extends HttpServlet{
 			ArticleDTO vDTO=new ArticleDTO();
 			vDTO.setNumero( req.getParameter("numero"));
 			vDTO.setNomProduit(req.getParameter("nomProduit"));
-			vDTO.setPrix(req.getParameter("prix"));
+			vDTO.setPrix(Double.parseDouble(req.getParameter("prix")));
 			service.create(vDTO);
 			
 	    }

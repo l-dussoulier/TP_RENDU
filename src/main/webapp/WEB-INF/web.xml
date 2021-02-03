@@ -30,6 +30,15 @@
 		<servlet-name>ClientServlet</servlet-name>
 		<url-pattern>/client/create</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ListeClientServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.ListeClientServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListeClientServlet</servlet-name>
+		<url-pattern>/client/ListeClient</url-pattern>
+	</servlet-mapping>
 	
 	
 </web-app>

@@ -12,6 +12,7 @@ import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
+import java.util.List;
 
 
 @Stateless
@@ -33,6 +34,11 @@ public class ClientServiceImpl implements ClientService {
 
 		dao.create(client);
 		
+	}
+
+	public List<Client> getClients() {
+		ClientDao clientDao = new ClientDaoImpl(em, utx);
+		return clientDao.getClients();
 	}
 
 }
