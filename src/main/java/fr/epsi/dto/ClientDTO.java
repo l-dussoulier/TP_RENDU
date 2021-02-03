@@ -2,11 +2,8 @@ package fr.epsi.dto;
 
 public class ClientDTO {
 
-
 	private String nom;
 	private String adresse;
-
-
 
 	public String getNom() {
 		return nom;

@@ -1,8 +1,6 @@
 package fr.epsi.entite;
 
-import fr.epsi.entite.Article;
 import javax.persistence.*;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,13 +12,14 @@ public class LigneFacture extends Object{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
 	private Integer qte;
 	private Double prix;
-
-	@OneToOne
+	@ManyToOne
+	@JoinColumn(name="facture_id")
+	private Facture facture;
+	@ManyToOne
+	@JoinColumn(name="article_id")
 	private Article article;
-
 
 	public Integer getQte() {
 		return qte;
@@ -38,7 +37,7 @@ public class LigneFacture extends Object{
 		this.prix = prix;
 	}
 
-	public Article getArticleDTO() {
+	public Article getArticle() {
 		return article;
 	}
 

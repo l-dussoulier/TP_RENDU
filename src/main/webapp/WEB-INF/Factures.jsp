@@ -2,7 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-
 <html>
 <head>
  <meta charset="ISO-8859-1">
@@ -26,7 +25,7 @@
   <c:forEach items="${factures}" var="factures">
    <tr>
     <td>
-     <c:out value="${factures.date}" />
+     <fmt:formatDate pattern="dd/MM/yyyy" type="date" value="${factures.date}" />
     </td>
     <td>
      <c:out value="${factures.numero}" />
@@ -35,16 +34,15 @@
      <c:out value="${factures.prix}" />
     </td>
     <td>
-     <c:out value="${factures.Id}" />
+     <a href="Factures/Detail?id=<c:out value="${factures.id}"/>"/>
+     Détail
+     </a>
     </td>
    </tr>
   </c:forEach>
   </tbody>
  </table>
-
  <a class="btn btn-primary disabled" href="#">Ajouter une Facture</a>
 </div>
-
-<%@include file="commons/footer.jsp"%>
 </body>
 </html>

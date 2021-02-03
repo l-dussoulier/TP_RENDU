@@ -1,7 +1,5 @@
 package fr.epsi.entite;
 
-import fr.epsi.dto.LigneFactureDTO;
-
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -12,12 +10,14 @@ public class Facture extends Object{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
 	private java.util.Date Date;
 	private String numero;
 	private Double prix;
-	@OneToMany
-	private List<LigneFacture> listeLigneFact;
+	@OneToMany(mappedBy="facture", fetch = FetchType.EAGER)
+	private List<LigneFacture> LignesFacture;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "client_id")
+	private Client client;
 
 
 	public Date getDate() {
@@ -44,19 +44,19 @@ public class Facture extends Object{
 		this.prix = prix;
 	}
 
-	public List<LigneFacture> getListeLigneFact() {
-		return listeLigneFact;
+	public List<LigneFacture> getLignesFacture() {
+		return LignesFacture;
 	}
 
 	public void setListeLigneFact(List<LigneFacture> listeLigneFact) {
-		this.listeLigneFact = listeLigneFact;
+		this.LignesFacture = listeLigneFact;
 	}
 
-	public void AddListeLigneFact(LigneFacture ligneFacture){
-		this.listeLigneFact.add(ligneFacture);
+	public void AddLignesFacture(LigneFacture ligneFacture){
+		this.LignesFacture.add(ligneFacture);
 	}
 
-	public Long getId() {
-		return id;
-	}
+	public Long getId() { return id; }
+
+	public Client getClient() {return client;}
 }

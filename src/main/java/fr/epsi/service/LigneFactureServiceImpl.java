@@ -1,14 +1,9 @@
 package fr.epsi.service;
 
-import fr.epsi.dao.ClientDao;
-import fr.epsi.dao.ClientDaoImpl;
 import fr.epsi.dao.LigneFactureDao;
 import fr.epsi.dao.LigneFactureDaoImpl;
-import fr.epsi.dto.ClientDTO;
 import fr.epsi.dto.LigneFactureDTO;
-import fr.epsi.entite.Client;
 import fr.epsi.entite.LigneFacture;
-
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;

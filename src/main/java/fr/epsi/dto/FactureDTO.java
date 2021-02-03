@@ -1,7 +1,6 @@
 package fr.epsi.dto;
 
 import fr.epsi.entite.LigneFacture;
-
 import java.util.Date;
 import java.util.List;
 
@@ -12,7 +11,6 @@ public class FactureDTO {
 	private String numero;
 	private Double prix;
 	private List<LigneFacture> listeLigneFact;
-
 
 	public Date getDate() {
 		return Date;
@@ -50,11 +48,7 @@ public class FactureDTO {
 		this.listeLigneFact.add(ligneFacture);
 	}
 
-	public Double getId() {
-		return id;
-	}
+	public Double getId() { return id; }
 
-	public void setId(Double id) {
-		this.id = id;
-	}
+	public void setId(Double id) { this.id = id; }
 }

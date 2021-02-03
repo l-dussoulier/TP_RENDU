@@ -1,6 +1,5 @@
 package fr.epsi.dao;
 
-import fr.epsi.entite.Client;
 import fr.epsi.entite.LigneFacture;
 
 import java.util.List;

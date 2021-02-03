@@ -2,11 +2,9 @@ package fr.epsi.dto;
 
 public class ArticleDTO {
 
-
 	private String numero;
 	private String nomProduit;
 	private Double prix;
-
 
 	public String getNumero() {
 		return numero;

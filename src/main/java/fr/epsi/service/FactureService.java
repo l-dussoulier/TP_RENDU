@@ -11,4 +11,6 @@ public interface FactureService {
 
 	List<Facture> getFactures();
 
+	Facture getById(long id);
+
 }

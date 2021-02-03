@@ -6,14 +6,8 @@
 <meta charset="ISO-8859-1">
 <title>Bienvenue !</title>
     <%@include file="commons/header.jsp"%>
-
 </head>
 <body>
  <%@include file="commons/menu.jsp"%>
- 
- 
-
-   <%@include file="commons/footer.jsp"%> 
-
 </body>
 </html>

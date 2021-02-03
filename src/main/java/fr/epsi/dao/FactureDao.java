@@ -8,4 +8,6 @@ public interface FactureDao {
   void create(Facture f);
 
   List<Facture> getFactures();
+
+  Facture getById(long id);
 }

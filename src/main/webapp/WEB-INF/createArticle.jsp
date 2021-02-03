@@ -10,15 +10,23 @@
 </head>
 <body>
  <%@include file="commons/menu.jsp"%>
-
-<form action="create" method="post">
- <label>N°</label> <input type="text" name="numero" />
- <label>Nom de l'article</label> <input type="text" name="nomProduit" />
- <label>Prix</label> <input type="text" name="prix" />
- 
- <input type="submit" value="Valider">
-</form>
- <%@include file="commons/footer.jsp"%>
-
+ <br>
+  <div class="row col-md-12">
+  <div class="col-md-4"></div>
+   <div class="col-md-4">
+  <form action="create" method="post">
+   <div class="form-group">
+   <label>N°</label>
+    <input class="form-control" type="text" name="numero" />
+   <label>Nom de l'article</label>
+    <input class="form-control" type="text" name="nomProduit" />
+   <label>Prix</label> <input class="form-control" type="text" name="prix" />
+    <small  class="form-text text-muted">Il faut renseigner un float exemple(14.90)</small>
+    <br>
+   <input class="btn btn-success text-right" type="submit" value="Valider">
+   </div>
+  </form>
+   </div>
+   </div>
 </body>
 </html>

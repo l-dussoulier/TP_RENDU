@@ -2,13 +2,8 @@ package fr.epsi.service;
 
 import fr.epsi.dao.FactureDao;
 import fr.epsi.dao.FactureDaoImpl;
-import fr.epsi.dao.LigneFactureDao;
-import fr.epsi.dao.LigneFactureDaoImpl;
 import fr.epsi.dto.FactureDTO;
-import fr.epsi.dto.LigneFactureDTO;
 import fr.epsi.entite.Facture;
-import fr.epsi.entite.LigneFacture;
-
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
@@ -42,6 +37,11 @@ public class FactureServiceImpl implements FactureService {
 	public List<Facture> getFactures() {
 		FactureDao FactureDao = new FactureDaoImpl(em, utx);
 		return FactureDao.getFactures();
+	}
+
+	public Facture getById(long id) {
+		FactureDao factureDao = new FactureDaoImpl(em, utx);
+		return factureDao.getById(id);
 	}
 
 }

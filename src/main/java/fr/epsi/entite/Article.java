@@ -1,6 +1,5 @@
 package fr.epsi.entite;
 
-import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,18 +11,17 @@ public class Article {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 	private String numero;
 	private String nomProduit;
 	private Double prix;
-	
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 
 	public void setNomProduit(String nom) {
 		this.nomProduit = nom;

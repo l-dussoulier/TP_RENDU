@@ -1,7 +1,6 @@
 package fr.epsi.dao;
 
 import fr.epsi.entite.Facture;
-import fr.epsi.entite.LigneFacture;
 
 import javax.persistence.EntityManager;
 import javax.transaction.*;
@@ -44,11 +43,13 @@ public class FactureDaoImpl implements FactureDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 	}
 
 	public List<Facture> getFactures() {
 		return em.createQuery("select f from Facture f", Facture.class).getResultList();
+	}
+
+	public Facture getById(long id) {
+		return em.find(Facture.class, id);
 	}
 }

@@ -3,13 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-
+    <%@include file="header.jsp"%>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,9 +13,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="article/ListeArticles">liste articles</a>
             </li>
@@ -29,7 +20,7 @@
                 <a class="nav-link" href="client/ListeClient">Liste Client</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Factures">Liste Factures</a>
+                <a class="nav-link" href="Factures">Liste Factures</a>
             </li>
         </ul>
     </div>

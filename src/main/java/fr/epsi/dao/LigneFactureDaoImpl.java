@@ -1,9 +1,6 @@
 package fr.epsi.dao;
 
-import fr.epsi.dto.LigneFactureDTO;
-import fr.epsi.entite.Client;
 import fr.epsi.entite.LigneFacture;
-
 import javax.persistence.EntityManager;
 import javax.transaction.*;
 import java.util.List;
@@ -45,8 +42,6 @@ public class LigneFactureDaoImpl implements LigneFactureDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 	}
 
 	public List<LigneFacture> getLigneFacture() {

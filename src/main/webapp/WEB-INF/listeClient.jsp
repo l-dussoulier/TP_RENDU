@@ -2,7 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-
 <html>
 <head>
  <meta charset="ISO-8859-1">
@@ -33,10 +32,7 @@
   </c:forEach>
   </tbody>
  </table>
-
  <a class="btn btn-primary" href="../client/create">Créer un client</a>
 </div>
-
-<%@include file="commons/footer.jsp"%>
 </body>
 </html>

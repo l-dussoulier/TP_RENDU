@@ -55,7 +55,16 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>FactureServlet</servlet-name>
-		<url-pattern>/Factures</url-pattern>
+		<url-pattern>Factures</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FactureDetailServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.FactureDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FactureDetailServlet</servlet-name>
+		<url-pattern>Factures/Detail</url-pattern>
 	</servlet-mapping>
 	
 	

@@ -2,16 +2,11 @@ package fr.epsi.dto;
 
 import fr.epsi.entite.Article;
 
-import java.util.Date;
-import java.util.List;
-
 public class LigneFactureDTO {
-
 
 	private Integer qte;
 	private Double prix;
 	private Article article;
-
 
 	public Integer getQte() {
 		return qte;
