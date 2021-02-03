@@ -32,7 +32,7 @@ public class ClientServlet extends HttpServlet{
 			cDTO.setAdresse(req.getParameter("adresse"));
 			service.create(cDTO);
 
-			re
+
 			
 	    }
 
