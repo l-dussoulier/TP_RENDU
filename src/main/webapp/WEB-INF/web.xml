@@ -39,6 +39,15 @@
 		<servlet-name>ListeClientServlet</servlet-name>
 		<url-pattern>/client/ListeClient</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ListeArticleServlet</servlet-name>
+		<servlet-class>fr.epsi.controller.ListeArticlesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListeArticleServlet</servlet-name>
+		<url-pattern>/article/ListeArticles</url-pattern>
+	</servlet-mapping>
 	
 	
 </web-app>

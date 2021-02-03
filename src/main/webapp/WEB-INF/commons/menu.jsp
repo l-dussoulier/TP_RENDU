@@ -23,10 +23,7 @@
                 <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="article/create">Créer un article</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="client/create">Créer un client</a>
+                <a class="nav-link" href="article/ListeArticles">liste articles</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="client/ListeClient">Liste Client</a>
